@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>G|I|X Generate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      @keyframes fade-in-fast {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      .animate-fade-in-fast {
+        animation: fade-in-fast 0.3s ease-out forwards;
+      }
+      @keyframes toast-in {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes toast-out {
+        from {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        to {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+      }
+      @keyframes overlay-show {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      .animate-toast-in {
+        animation: toast-in 0.3s ease-out forwards;
+      }
+      .animate-toast-out {
+        animation: toast-out 0.3s ease-out forwards;
+      }
+      .animate-overlay-show {
+        animation: overlay-show 0.2s ease-out forwards;
+      }
+    </style>
+  <script id="project-metadata" type="application/json">
+      {
+        "projectName": "AI Facebook Post Generator",
+        "description": "A web application that uses the Gemini API to generate high-engagement content for Facebook, specifically tailored to the professional persona of Gazi Pollob Hussain. The app supports creating both rich text posts and scripts for simulated video posts.",
+        "features": [
+          {
+            "name": "AI-Powered Content Creation",
+            "description": "Leverages Google's Gemini API to generate compelling post copy from a simple user topic."
+          },
+          {
+            "name": "Gamified Skill Progression",
+            "description": "Features a 'Skills Dashboard' with levels and challenges to guide users from novice to expert, enhancing their content creation and monetization knowledge."
+          },
+          {
+            "name": "Dual Post Format Support",
+            "description": "Features a tabbed interface to switch between generating standard 'Text Posts' and scripts for 'Video Posts'."
+          },
+          {
+            "name": "Persona-Driven Generation",
+            "description": "The AI operates with a specific system instruction to adopt the voice and expertise of a tech founder and AI ethics advocate."
+          },
+          {
+            "name": "Realistic UI Simulation",
+            "description": "Renders the output in high-fidelity components that mimic the appearance of actual Facebook text and video posts."
+          },
+          {
+            "name": "Automatic Professional Signature",
+            "description": "Appends a detailed, dynamically-styled signature block to all generated content, customized for either text or video context."
+          },
+          {
+            "name": "Simulated Platform Metadata",
+            "description": "Includes an expandable UI section displaying simulated cryptographic app signatures to represent platform authenticity and security."
+          }
+        ],
+        "technologies": [
+          "React",
+          "TypeScript",
+          "Google Gemini API",
+          "Tailwind CSS"
+        ],
+        "targetPersona": {
+          "name": "Gazi Pollob Hussain",
+          "role": "Founder & Lead Developer — AikoInfinity 2.0",
+          "expertise": "Ethics-First AI/ML Developer | Open-Source Advocate | XAI Innovator"
+        },
+        "simulatedFacebookAppData": {
+          "com.facebook.orca": {
+            "permissions": [
+              "com.facebook.orca.fbpermission.MANAGE_MESSAGING",
+              "com.facebook.orca.fbpermission.MANAGE_CALLING",
+              "com.facebook.katana.fbpermission.LITE_PROVIDER_ACCESS",
+              "com.facebook.orca.fbpermission.MANAGE_CONTACTS"
+            ],
+            "signature": {
+              "algorithm": "sha256withrsa",
+              "value": "r4lLrloAPe4mLOc8ExPQJCrbWSChPSo1w3rNz6Ql3pKaugimPXgTO5xayDT6RdugOAaIhbGcqM92lbcgAvi2XY88ZvZmHu5LbntIykL6ZVSm7pW2ItemBv6m9NwRG1_u5d99CbpBdkptlb6xsarVTQemMOy73N76Rwyvsd_Une0="
+            }
+          },
+          "com.instagram.android": {
+            "permissions": [
+              "com.instagram.android.fbpermission.MANAGE_MESSAGING",
+              "com.instagram.android.fbpermission.SEND_ACTION_RESULT"
+            ],
+            "signature": {
+              "algorithm": "sha256withrsa",
+              "value": "NjSBCzBxImkZqUPfVsSAX-5RNtbwowdY-orP_Jfe21POfpgCHrtXHiVonSpnwskG1ET6hIG1Qa8MjjK9hlyWkddsMWPcmKTTSV1gIJfLOH8V6uu8_QxnAww0OKVkCHv7NaM307L0eqzxt1-FbwgXCIzUuxyLc-Ab8XrTE7734Io="
+            }
+          },
+          "com.facebook.katana": {
+            "permissions": [
+              "com.facebook.katana.fbpermission.DISPATCH_SMARTGLASSES_REQUEST",
+              "com.facebook.katana.fbpermission.LITE_PROVIDER_ACCESS",
+              "com.facebook.katana.fbpermission.SSO_ACCESS"
+            ],
+            "signature": {
+              "algorithm": "sha256withrsa",
+              "value": "YnYOtfni3zGJ8hIX0C1UwHC1Cz39Y2mxyaNFBvRW02lUYEo5ds0ikxheBKNsehwwU7m6nGTbZD_0l242EvtMg3Yu3WdeYhACypk95LkhrOhb1OFNFGhkV7APG8J4zgK9YsS5EU5jRu4gDTUm4x4kuX-9LuNeNGzwEu6j-w_-kHI="
+            }
+          },
+          "com.facebook.stella": {
+            "permissions": [
+              "com.facebook.wearable.companion.fbpermission.APP_LINKS"
+            ],
+            "signature": {
+              "algorithm": "sha256withrsa",
+              "value": "A-VxaNgOtzDf9f1gkVrSGFwewtzQKuQnnPg7leUSY1SGpFAWSAjj7ntLdx7FBLLJPvNtG51eZpgNQ8KdUjVGjj0Xt6c4FHSN6ib95LwPaaGIj0AXcgoAcQD3TZYyDCpb8N2gUBxoZNGqSWphkn6PxZSgvbo4CPHGR__T6Z4Cd39c9R5Bdp9jmm6GfD1XssUBjNoGqJfmg8gwm3TsE5lYeGu9xTbFAdu-1pTgWmSAHl0szTBPzLwB_GVLPEFBZh1qVLwaIFRDcJc37pC6Wau9VpsKSEFVcsgX-hrnl1Sdhfn_m6oKaRNYIvaQtYnXvysehDw2j7UWqB-b-eH41-JrmUvl4O_H3KeRAGVjJOFNHEbnkcvYXEHhg3CSskTxmj9M-HswKLH53HxXTAdfVSLPyoYPjUsvX1dxIqXejfk8KeJTq5Vk6hltF-76Iug9rzEKX8V_-mMIQ_Aw6fcn4eqEO_qioMHNpUwxpPYgctsEKHMiMHblkLnoj97ChVnQvHx2-vZfqx5nK9Nosfmx9o8NZoL1uX-HQo7d6S3aFRqQMblP5lbBBaqqwnjxTSzQ_7G1ytWdpGr0K4GDc6gUeiwn_BR0q3H-e_AZFuYANNq732wFir1JOVRfkNnBGM14OMeBFf2fy3bI7NOYERShH72_JRr4ekpp2Wi_Fn0M3u-BtUY="
+            }
+          }
+        }
+      }
+  </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.12.0",
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "react": "https://esm.sh/react@^19.1.1",
+    "framer-motion": "https://esm.sh/framer-motion@^11.3.12"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="fb-root"></div>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
